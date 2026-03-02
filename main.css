@@ -1,35 +1,16 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===== Trang bình thường (có background ảnh) ===== */
-.normal-page {
-    background: url("img.png") no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Làm nội dung nổi bật trên ảnh */
-.normal-page .page-content {
-    padding: 60px 20px;
-    color: white;
-}
-
-/* ===== Trang bài viết ===== */
-.post-page {
-    background: #f4f7f9;
-}
-
-/* Khung nội dung bài viết */
-.post-page .page-content {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 40px;
-    background: white;
-    border-radius: 12px;
-    line-height: 1.8;
-}
+/* ================= HEADER ================= */
 .site-header {
   position: relative;
   z-index: 10;
@@ -40,6 +21,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
 }
 
 .menu {
@@ -54,9 +36,88 @@ html, body {
   text-decoration: none;
   font-size: 18px;
   color: white;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.7;
 }
 
 .brand {
   font-size: 24px;
   font-weight: 600;
+}
+
+/* ================= TRANG THƯỜNG ================= */
+.normal-page {
+  background: url("img.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.normal-page .page-content {
+  padding: 80px 20px;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ================= TRANG BÀI VIẾT ================= */
+.post-page {
+  background: #f4f7f9;
+}
+
+.post-page .page-content {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ================= TRANG NHẬT KÝ ================= */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.post-box {
+  display: block;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.post-box:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .menu {
+      gap: 20px;
+  }
+
+  .normal-page .page-content {
+      padding: 60px 15px;
+  }
+
+  .post-page .page-content {
+      margin: 40px 15px;
+      padding: 25px;
+  }
 }
