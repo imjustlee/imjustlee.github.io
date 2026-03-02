@@ -1,32 +1,62 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
 }
 
 /* ===== Trang bình thường (có background ảnh) ===== */
 .normal-page {
-  background: url("img.png") no-repeat center center fixed;
-  background-size: cover;
+    background: url("img.png") no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Làm nội dung nổi bật trên ảnh */
 .normal-page .page-content {
-  padding: 60px 20px;
-  color: white;
+    padding: 60px 20px;
+    color: white;
 }
 
 /* ===== Trang bài viết ===== */
 .post-page {
-  background: #f4f7f9;
+    background: #f4f7f9;
 }
 
 /* Khung nội dung bài viết */
 .post-page .page-content {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  background: white;
-  border-radius: 12px;
-  line-height: 1.8;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    line-height: 1.8;
+}
+.site-header {
+  position: relative;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 600;
 }
