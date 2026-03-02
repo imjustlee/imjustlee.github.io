@@ -89,6 +89,10 @@ html, body {
   line-height: 1.8;
   color: #333;
 }
+.heart {
+  color: #e63946;
+  font-size: 20px;
+}
 
 /* ===== Trang Nhật ký dạng card vuông ===== */
 
