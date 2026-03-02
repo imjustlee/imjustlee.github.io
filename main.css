@@ -46,6 +46,8 @@ html, body {
 .brand {
   font-size: 23px;
   font-weight: 600;
+  text-decoration: none;
+  color: black;
 }
 
 /* ================= TRANG THƯỜNG ================= */
