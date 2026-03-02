@@ -1,7 +1,9 @@
 title: BeOff
 description: Blog cá nhân nhỏ nhỏ về học web và những điều tôi tò mò
-url: "https://NguyenLe-commits.github.io"
+url: "https://nguyenLe-commits.github.io"
 baseurl: "/nguyenlee-blog"
 
 markdown: kramdown
-permalink: /:year/:month/:day/:title/
+permalink: /:title/
+plugins:
+  - jekyll-sitemap
