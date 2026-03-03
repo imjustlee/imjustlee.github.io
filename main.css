@@ -1,0 +1,158 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: relative;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+.brand {
+  font-size: 23px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+/* ================= TRANG THƯỜNG ================= */
+.normal-page {
+  background: url("img.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.normal-page .page-content {
+  padding: 80px 20px;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.home {
+  text-align: center;
+  margin-top: 50px;
+}
+.home h1 {
+  font-size: 40px;
+}
+
+.home p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+/* ================= TRANG BÀI VIẾT ================= */
+.post-page {
+  background: #f4f7f9;
+}
+
+.post-page .page-content {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  line-height: 1.8;
+  color: #333;
+}
+.heart {
+  color: #e63946;
+  font-size: 20px;
+}
+
+/* ===== Trang Nhật ký dạng card vuông ===== */
+
+.post-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.post-box {
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.post-box:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Trang About */
+.about {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about p {
+  font-size: 19px;
+  line-height: 1.9;
+  text-align: justify;
+  margin: 20px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .nav {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .menu {
+      gap: 20px;
+  }
+
+  .normal-page .page-content {
+      padding: 60px 15px;
+  }
+
+  .post-page .page-content {
+      margin: 40px 15px;
+      padding: 25px;
+  }
+}
